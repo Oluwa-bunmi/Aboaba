@@ -37,7 +37,7 @@ supporting emergency services."
         description="Support programs that provide food, shelter,
 and healthcare to vulnerable children in the
 community."
-        path="/welfare-donation"
+        path="/children-donation"
         imgOne={welfareOne}
         imgTwo={welfareTwo}
       />

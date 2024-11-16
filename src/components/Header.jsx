@@ -1,9 +1,10 @@
-import React, { useState } from 'react'
-import logo from "../assets/logo.svg"
-import { Link, NavLink } from 'react-router-dom'
+import React, { useState } from "react";
+import logo from "../assets/logo.svg";
+import { Link, NavLink } from "react-router-dom";
 
 import { FaBars } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
+import { Link as ScrollLink } from "react-scroll";
 const Header = () => {
   const [nav, setNav] = useState(false);
   const handleNav = () => {
@@ -32,9 +33,14 @@ const Header = () => {
             </NavLink>
           </li>
         </ul>
-        <Link className="hidden lg:block uppercase bg-primary text-dark py-3 rounded-[28px] font-bold px-6">
+        <ScrollLink
+          to="donate"
+          smooth={true}
+          spy={true}
+          className="hidden lg:block uppercase bg-primary text-dark py-3 rounded-[28px] font-bold px-6 cursor-pointer"
+        >
           Donate now
-        </Link>
+        </ScrollLink>
         <FaBars className="lg:hidden text-3xl" onClick={handleNav} />
       </div>
       <div
@@ -79,6 +85,6 @@ const Header = () => {
       </div>
     </nav>
   );
-}
+};
 
-export default Header
+export default Header;
